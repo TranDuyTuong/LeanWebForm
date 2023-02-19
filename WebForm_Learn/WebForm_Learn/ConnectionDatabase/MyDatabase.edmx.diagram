@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c7f25f4ffec46608ca404e85431115f" Name="Diagram1">
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.ActiverAccount" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.AnswerComment" Width="1.5" PointX="7.5" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.AnswerGmailRequestPassword" Width="1.5" PointX="15.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.AnswerRequest" Width="1.5" PointX="10.5" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.AppRoleClaim" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.AppUserClaim" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.AppUserLogin" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.AppUserRole" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.AppUserToken" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.BirthdayUser" Width="1.5" PointX="7.5" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.ChatImageStaff" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.ChatStaff" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.City" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.CommentMusic" Width="1.5" PointX="7.5" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.DeleteNotification" Width="1.5" PointX="8.25" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.District" Width="1.5" PointX="3" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.DowloadMusic" Width="1.5" PointX="15.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.FileMusic" Width="1.5" PointX="15.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.FilePlan" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.Gender" Width="1.5" PointX="3" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.HappyBirthdayStaff" Width="1.5" PointX="7.5" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.HistoryRole" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.ImageQRCore" Width="1.5" PointX="15.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.LeverUser" Width="1.5" PointX="3" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.LikeMusic" Width="1.5" PointX="10.5" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.Login" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.Marriage" Width="1.5" PointX="3" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.Music" Width="1.5" PointX="13.5" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.NotificationPlan" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.NotificationUser" Width="1.5" PointX="10.5" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.PlanStaff" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.Rating" Width="1.5" PointX="18.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.ReadUser" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.ReceiveRequest" Width="1.5" PointX="11.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.RequestPassword" Width="1.5" PointX="13.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.RequestUser" Width="1.5" PointX="13.5" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.Role" Width="1.5" PointX="11.25" PointY="47.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.Sainte" Width="1.5" PointX="11.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.Season" Width="1.5" PointX="11.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.StaffOrUser" Width="1.5" PointX="3" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.StatusHappyBirthDayStaff" Width="1.5" PointX="5.25" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.StatusMusic" Width="1.5" PointX="11.25" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.StatusPlan" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.StatusRole" Width="1.5" PointX="9" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.StatusSainte" Width="1.5" PointX="9" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.StatusSeason" Width="1.5" PointX="9" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.StatusStaffOff" Width="1.5" PointX="3" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.T_UpdateMusics" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.TypeSentUser" Width="1.5" PointX="8.25" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.UserRole" Width="1.5" PointX="13.5" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.User" Width="1.5" PointX="5.25" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerMusicDatabaseModel.ViewNotification" Width="1.5" PointX="8.25" PointY="44.125" IsExpanded="true" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Users_ActiverAccounts_IdAccountActiver" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_AnswerComments_CommentMusics_IdComment" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_AnswerComments_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_AnswerGmailRequestPasswords_RequestPasswords_IdRequestPassword" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_AnswerRequests_ReadUsers_IdRead" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_AnswerRequests_RequestUsers_IdRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_AnswerRequests_TypeSentUsers_IdTypeSent" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_AnswerRequests_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_BirthdayUsers_Users_T_UsersIdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Districts_Citys_IdCity" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Users_Citys_IdCity" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_CommentMusics_Musics_IdMusic" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_CommentMusics_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_NotificationUsers_DeleteNotifications_IdDeleteNotification" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Users_Districts_IdDistrict" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_DowloadMusics_Musics_IdMusic" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_FileMusics_Musics_IdMusic" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Users_Genders_IdGender" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_HappyBirthdayStaffs_StatusHappyBirthDayStaffs_IsStatusSent" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_HappyBirthdayStaffs_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_ImageQRCores_Musics_IdMusic" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Users_LeverUsers_IdLever" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_LikeMusics_Musics_IdMusic" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_LikeMusics_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Users_Marriages_IdMarriage" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Musics_Saintes_IdSaints" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Musics_Seasons_IdSeason" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Musics_StatusMusics_IdStatusMusic" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Musics_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Ratings_Musics_IdMusic" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_NotificationUsers_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_NotificationUsers_ViewNotifications_IdViewNotification" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Ratings_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_RequestPasswords_ReceiveRequests_IdReceiveRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_RequestUsers_ReceiveRequests_IdReceiveRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_RequestUsers_Users_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Roles_StatusRoles_IdStatusRole" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_UserRoles_Roles_IdRole" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Saintes_StatusSaintes_IdStatusSaints" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Seasons_StatusSeasons_IdStatusSeason" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Users_StaffOrUsers_IdStaffOrUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_Users_StatusStaffOffs_StatusStaffOff" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerMusicDatabaseModel.FK_UserRoles_Users_IdUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

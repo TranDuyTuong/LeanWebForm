@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ManagerMusicDatabaseModelStoreContainer" CdmEntityContainer="ManagerMusicDatabaseEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActiverAccounts">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.ActiverAccount">
+        <MappingFragment StoreEntitySet="ActiverAccounts">
+          <ScalarProperty Name="IdAccountActiver" ColumnName="IdAccountActiver" />
+          <ScalarProperty Name="NameAccountActiver" ColumnName="NameAccountActiver" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnswerComments">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.AnswerComment">
+        <MappingFragment StoreEntitySet="AnswerComments">
+          <ScalarProperty Name="IdAnswer" ColumnName="IdAnswer" />
+          <ScalarProperty Name="IdComment" ColumnName="IdComment" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="ContentAnswer" ColumnName="ContentAnswer" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnswerGmailRequestPasswords">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.AnswerGmailRequestPassword">
+        <MappingFragment StoreEntitySet="AnswerGmailRequestPasswords">
+          <ScalarProperty Name="IdAnswerGmail" ColumnName="IdAnswerGmail" />
+          <ScalarProperty Name="IdRequestPassword" ColumnName="IdRequestPassword" />
+          <ScalarProperty Name="IdStaff" ColumnName="IdStaff" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="TitleAnswer" ColumnName="TitleAnswer" />
+          <ScalarProperty Name="ContentAnswer" ColumnName="ContentAnswer" />
+          <ScalarProperty Name="DateAnswer" ColumnName="DateAnswer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnswerRequests">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.AnswerRequest">
+        <MappingFragment StoreEntitySet="AnswerRequests">
+          <ScalarProperty Name="IdAnswer" ColumnName="IdAnswer" />
+          <ScalarProperty Name="IdTypeSent" ColumnName="IdTypeSent" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdRequest" ColumnName="IdRequest" />
+          <ScalarProperty Name="IdStaff" ColumnName="IdStaff" />
+          <ScalarProperty Name="IdRead" ColumnName="IdRead" />
+          <ScalarProperty Name="TitleSent" ColumnName="TitleSent" />
+          <ScalarProperty Name="ContentSent" ColumnName="ContentSent" />
+          <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppRoleClaims">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.AppRoleClaim">
+        <MappingFragment StoreEntitySet="AppRoleClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppUserClaims">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.AppUserClaim">
+        <MappingFragment StoreEntitySet="AppUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppUserLogins">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.AppUserLogin">
+        <MappingFragment StoreEntitySet="AppUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="ProviderDisplayName" ColumnName="ProviderDisplayName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppUserRoles">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.AppUserRole">
+        <MappingFragment StoreEntitySet="AppUserRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppUserTokens">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.AppUserToken">
+        <MappingFragment StoreEntitySet="AppUserTokens">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BirthdayUsers">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.BirthdayUser">
+        <MappingFragment StoreEntitySet="BirthdayUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="TitleSent" ColumnName="TitleSent" />
+          <ScalarProperty Name="ContentSent" ColumnName="ContentSent" />
+          <ScalarProperty Name="BirthdayUser1" ColumnName="BirthdayUser" />
+          <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+          <ScalarProperty Name="StatusSent" ColumnName="StatusSent" />
+          <ScalarProperty Name="T_UsersIdUser" ColumnName="T_UsersIdUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChatImageStaffs">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.ChatImageStaff">
+        <MappingFragment StoreEntitySet="ChatImageStaffs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NameImage" ColumnName="NameImage" />
+          <ScalarProperty Name="TypeImage" ColumnName="TypeImage" />
+          <ScalarProperty Name="FileImage" ColumnName="FileImage" />
+          <ScalarProperty Name="IdChat" ColumnName="IdChat" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="MimeType" ColumnName="MimeType" />
+          <ScalarProperty Name="ImageBase64" ColumnName="ImageBase64" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChatStaffs">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.ChatStaff">
+        <MappingFragment StoreEntitySet="ChatStaffs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Citys">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.City">
+        <MappingFragment StoreEntitySet="Citys">
+          <ScalarProperty Name="IdCity" ColumnName="IdCity" />
+          <ScalarProperty Name="NameCity" ColumnName="NameCity" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentMusics">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.CommentMusic">
+        <MappingFragment StoreEntitySet="CommentMusics">
+          <ScalarProperty Name="IdComment" ColumnName="IdComment" />
+          <ScalarProperty Name="IdMusic" ColumnName="IdMusic" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="ContentComment" ColumnName="ContentComment" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeleteNotifications">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.DeleteNotification">
+        <MappingFragment StoreEntitySet="DeleteNotifications">
+          <ScalarProperty Name="IdDeleteNotification" ColumnName="IdDeleteNotification" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Districts">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.District">
+        <MappingFragment StoreEntitySet="Districts">
+          <ScalarProperty Name="IdDistrict" ColumnName="IdDistrict" />
+          <ScalarProperty Name="IdCity" ColumnName="IdCity" />
+          <ScalarProperty Name="NameDistrict" ColumnName="NameDistrict" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DowloadMusics">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.DowloadMusic">
+        <MappingFragment StoreEntitySet="DowloadMusics">
+          <ScalarProperty Name="IdDowload" ColumnName="IdDowload" />
+          <ScalarProperty Name="IdMusic" ColumnName="IdMusic" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileMusics">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.FileMusic">
+        <MappingFragment StoreEntitySet="FileMusics">
+          <ScalarProperty Name="IdFile" ColumnName="IdFile" />
+          <ScalarProperty Name="IdMusic" ColumnName="IdMusic" />
+          <ScalarProperty Name="NameFile" ColumnName="NameFile" />
+          <ScalarProperty Name="DataFile" ColumnName="DataFile" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="MimeType" ColumnName="MimeType" />
+          <ScalarProperty Name="DataFieImage" ColumnName="DataFieImage" />
+          <ScalarProperty Name="NameImage" ColumnName="NameImage" />
+          <ScalarProperty Name="TypeImage" ColumnName="TypeImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilePlans">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.FilePlan">
+        <MappingFragment StoreEntitySet="FilePlans">
+          <ScalarProperty Name="IdFile" ColumnName="IdFile" />
+          <ScalarProperty Name="IdPlan" ColumnName="IdPlan" />
+          <ScalarProperty Name="TypeFile" ColumnName="TypeFile" />
+          <ScalarProperty Name="MimeType" ColumnName="MimeType" />
+          <ScalarProperty Name="ContentFile" ColumnName="ContentFile" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="NameFile" ColumnName="NameFile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.Gender">
+        <MappingFragment StoreEntitySet="Genders">
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+          <ScalarProperty Name="NameGender" ColumnName="NameGender" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HappyBirthdayStaffs">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.HappyBirthdayStaff">
+        <MappingFragment StoreEntitySet="HappyBirthdayStaffs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IsStatusSent" ColumnName="IsStatusSent" />
+          <ScalarProperty Name="TitleSent" ColumnName="TitleSent" />
+          <ScalarProperty Name="ContentSent" ColumnName="ContentSent" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoryRoles">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.HistoryRole">
+        <MappingFragment StoreEntitySet="HistoryRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IdUserDecenRole" ColumnName="IdUserDecenRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImageQRCores">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.ImageQRCore">
+        <MappingFragment StoreEntitySet="ImageQRCores">
+          <ScalarProperty Name="IdQRcore" ColumnName="IdQRcore" />
+          <ScalarProperty Name="IdMusic" ColumnName="IdMusic" />
+          <ScalarProperty Name="TitleImage" ColumnName="TitleImage" />
+          <ScalarProperty Name="ImageData" ColumnName="ImageData" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeverUsers">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.LeverUser">
+        <MappingFragment StoreEntitySet="LeverUsers">
+          <ScalarProperty Name="IdLever" ColumnName="IdLever" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DescriptionName" ColumnName="DescriptionName" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LikeMusics">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.LikeMusic">
+        <MappingFragment StoreEntitySet="LikeMusics">
+          <ScalarProperty Name="IdLike" ColumnName="IdLike" />
+          <ScalarProperty Name="IdMusic" ColumnName="IdMusic" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="LikeStatus" ColumnName="LikeStatus" />
+          <ScalarProperty Name="DateLike" ColumnName="DateLike" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.Login">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="IdLogin" ColumnName="IdLogin" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="DateLogin" ColumnName="DateLogin" />
+          <ScalarProperty Name="TimeLogin" ColumnName="TimeLogin" />
+          <ScalarProperty Name="TimeSignout" ColumnName="TimeSignout" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marriages">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.Marriage">
+        <MappingFragment StoreEntitySet="Marriages">
+          <ScalarProperty Name="IdMarriage" ColumnName="IdMarriage" />
+          <ScalarProperty Name="NameMarriage" ColumnName="NameMarriage" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musics">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.Music">
+        <MappingFragment StoreEntitySet="Musics">
+          <ScalarProperty Name="IdMusic" ColumnName="IdMusic" />
+          <ScalarProperty Name="NoMusic" ColumnName="NoMusic" />
+          <ScalarProperty Name="NameMusic" ColumnName="NameMusic" />
+          <ScalarProperty Name="AuthorMusic" ColumnName="AuthorMusic" />
+          <ScalarProperty Name="IdSeason" ColumnName="IdSeason" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="IdStatusMusic" ColumnName="IdStatusMusic" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdStaff" ColumnName="IdStaff" />
+          <ScalarProperty Name="TimeCreate" ColumnName="TimeCreate" />
+          <ScalarProperty Name="IdSaints" ColumnName="IdSaints" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="TokenData" ColumnName="TokenData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationPlans">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.NotificationPlan">
+        <MappingFragment StoreEntitySet="NotificationPlans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdPlan" ColumnName="IdPlan" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="StatusView" ColumnName="StatusView" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationUsers">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.NotificationUser">
+        <MappingFragment StoreEntitySet="NotificationUsers">
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdViewNotification" ColumnName="IdViewNotification" />
+          <ScalarProperty Name="IdDeleteNotification" ColumnName="IdDeleteNotification" />
+          <ScalarProperty Name="TitleNotification" ColumnName="TitleNotification" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="TimeCreate" ColumnName="TimeCreate" />
+          <ScalarProperty Name="AuthorNotification" ColumnName="AuthorNotification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanStaffs">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.PlanStaff">
+        <MappingFragment StoreEntitySet="PlanStaffs">
+          <ScalarProperty Name="IdPlan" ColumnName="IdPlan" />
+          <ScalarProperty Name="NamePlan" ColumnName="NamePlan" />
+          <ScalarProperty Name="ContentPlan" ColumnName="ContentPlan" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="IdUserPlan" ColumnName="IdUserPlan" />
+          <ScalarProperty Name="IdUserRequest" ColumnName="IdUserRequest" />
+          <ScalarProperty Name="DateComplete" ColumnName="DateComplete" />
+          <ScalarProperty Name="IdStatusPlan" ColumnName="IdStatusPlan" />
+          <ScalarProperty Name="AcceptPlan" ColumnName="AcceptPlan" />
+          <ScalarProperty Name="TimeComplete" ColumnName="TimeComplete" />
+          <ScalarProperty Name="TimeUp" ColumnName="TimeUp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ratings">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.Rating">
+        <MappingFragment StoreEntitySet="Ratings">
+          <ScalarProperty Name="IdRating" ColumnName="IdRating" />
+          <ScalarProperty Name="IdMusic" ColumnName="IdMusic" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Rating1" ColumnName="Rating" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReadUsers">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.ReadUser">
+        <MappingFragment StoreEntitySet="ReadUsers">
+          <ScalarProperty Name="IdRead" ColumnName="IdRead" />
+          <ScalarProperty Name="ReadContent" ColumnName="ReadContent" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReceiveRequests">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.ReceiveRequest">
+        <MappingFragment StoreEntitySet="ReceiveRequests">
+          <ScalarProperty Name="IdReceiveRequest" ColumnName="IdReceiveRequest" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestPasswords">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.RequestPassword">
+        <MappingFragment StoreEntitySet="RequestPasswords">
+          <ScalarProperty Name="IdRequestPassword" ColumnName="IdRequestPassword" />
+          <ScalarProperty Name="IdReceiveRequest" ColumnName="IdReceiveRequest" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="TitleRequest" ColumnName="TitleRequest" />
+          <ScalarProperty Name="ContentRequest" ColumnName="ContentRequest" />
+          <ScalarProperty Name="GmailRequest" ColumnName="GmailRequest" />
+          <ScalarProperty Name="ImageRequest" ColumnName="ImageRequest" />
+          <ScalarProperty Name="DateRequest" ColumnName="DateRequest" />
+          <ScalarProperty Name="DateHandled" ColumnName="DateHandled" />
+          <ScalarProperty Name="DateSuccess" ColumnName="DateSuccess" />
+          <ScalarProperty Name="MineType" ColumnName="MineType" />
+          <ScalarProperty Name="TypeImg" ColumnName="TypeImg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestUsers">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.RequestUser">
+        <MappingFragment StoreEntitySet="RequestUsers">
+          <ScalarProperty Name="IdRequest" ColumnName="IdRequest" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="TitleRequest" ColumnName="TitleRequest" />
+          <ScalarProperty Name="ContentRequest" ColumnName="ContentRequest" />
+          <ScalarProperty Name="DateRequest" ColumnName="DateRequest" />
+          <ScalarProperty Name="DateHandled" ColumnName="DateHandled" />
+          <ScalarProperty Name="DateSuccess" ColumnName="DateSuccess" />
+          <ScalarProperty Name="IdReceiveRequest" ColumnName="IdReceiveRequest" />
+          <ScalarProperty Name="IdTypeSent" ColumnName="IdTypeSent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="IdStatusRole" ColumnName="IdStatusRole" />
+          <ScalarProperty Name="SymbolRole" ColumnName="SymbolRole" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NormalizedName" ColumnName="NormalizedName" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saintes">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.Sainte">
+        <MappingFragment StoreEntitySet="Saintes">
+          <ScalarProperty Name="IdSaints" ColumnName="IdSaints" />
+          <ScalarProperty Name="NameSaints" ColumnName="NameSaints" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="IdStatusSaints" ColumnName="IdStatusSaints" />
+          <ScalarProperty Name="IdStaff" ColumnName="IdStaff" />
+          <ScalarProperty Name="TokenData" ColumnName="TokenData" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seasons">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.Season">
+        <MappingFragment StoreEntitySet="Seasons">
+          <ScalarProperty Name="IdSeason" ColumnName="IdSeason" />
+          <ScalarProperty Name="NameSeason" ColumnName="NameSeason" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="IdStatusSeason" ColumnName="IdStatusSeason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StaffOrUsers">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.StaffOrUser">
+        <MappingFragment StoreEntitySet="StaffOrUsers">
+          <ScalarProperty Name="IdStaffOrUser" ColumnName="IdStaffOrUser" />
+          <ScalarProperty Name="symbol" ColumnName="symbol" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusHappyBirthDayStaffs">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.StatusHappyBirthDayStaff">
+        <MappingFragment StoreEntitySet="StatusHappyBirthDayStaffs">
+          <ScalarProperty Name="IsStatusSent" ColumnName="IsStatusSent" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusMusics">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.StatusMusic">
+        <MappingFragment StoreEntitySet="StatusMusics">
+          <ScalarProperty Name="IdStatusMusic" ColumnName="IdStatusMusic" />
+          <ScalarProperty Name="NameStatusMusic" ColumnName="NameStatusMusic" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusPlans">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.StatusPlan">
+        <MappingFragment StoreEntitySet="StatusPlans">
+          <ScalarProperty Name="IdStatusPlan" ColumnName="IdStatusPlan" />
+          <ScalarProperty Name="NameStauts" ColumnName="NameStauts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusRoles">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.StatusRole">
+        <MappingFragment StoreEntitySet="StatusRoles">
+          <ScalarProperty Name="IdStatusRole" ColumnName="IdStatusRole" />
+          <ScalarProperty Name="NameStatus" ColumnName="NameStatus" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusSaintes">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.StatusSainte">
+        <MappingFragment StoreEntitySet="StatusSaintes">
+          <ScalarProperty Name="IdIdStatusSaints" ColumnName="IdIdStatusSaints" />
+          <ScalarProperty Name="NameStatusSaints" ColumnName="NameStatusSaints" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusSeasons">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.StatusSeason">
+        <MappingFragment StoreEntitySet="StatusSeasons">
+          <ScalarProperty Name="IdStatusSeason" ColumnName="IdStatusSeason" />
+          <ScalarProperty Name="NameStatus" ColumnName="NameStatus" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusStaffOffs">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.StatusStaffOff">
+        <MappingFragment StoreEntitySet="StatusStaffOffs">
+          <ScalarProperty Name="StatusStaffOff1" ColumnName="StatusStaffOff" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_UpdateMusics">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.T_UpdateMusics">
+        <MappingFragment StoreEntitySet="T_UpdateMusics">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMusic" ColumnName="IdMusic" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="TokenData" ColumnName="TokenData" />
+          <ScalarProperty Name="FileNameOld" ColumnName="FileNameOld" />
+          <ScalarProperty Name="FileNameNew" ColumnName="FileNameNew" />
+          <ScalarProperty Name="NameMusicOld" ColumnName="NameMusicOld" />
+          <ScalarProperty Name="NameMuiscNew" ColumnName="NameMuiscNew" />
+          <ScalarProperty Name="AuthorOld" ColumnName="AuthorOld" />
+          <ScalarProperty Name="AuthorNew" ColumnName="AuthorNew" />
+          <ScalarProperty Name="IdSeasonOld" ColumnName="IdSeasonOld" />
+          <ScalarProperty Name="IdSaintOld" ColumnName="IdSaintOld" />
+          <ScalarProperty Name="IdSeasonNew" ColumnName="IdSeasonNew" />
+          <ScalarProperty Name="IdSaintNew" ColumnName="IdSaintNew" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeSentUsers">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.TypeSentUser">
+        <MappingFragment StoreEntitySet="TypeSentUsers">
+          <ScalarProperty Name="IdTypeSent" ColumnName="IdTypeSent" />
+          <ScalarProperty Name="NameType" ColumnName="NameType" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="DateDecentralization" ColumnName="DateDecentralization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdStaff" ColumnName="IdStaff" />
+          <ScalarProperty Name="IdAccountActiver" ColumnName="IdAccountActiver" />
+          <ScalarProperty Name="IdLever" ColumnName="IdLever" />
+          <ScalarProperty Name="IdStaffOrUser" ColumnName="IdStaffOrUser" />
+          <ScalarProperty Name="StatusStaffOff" ColumnName="StatusStaffOff" />
+          <ScalarProperty Name="IdMarriage" ColumnName="IdMarriage" />
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+          <ScalarProperty Name="IdCity" ColumnName="IdCity" />
+          <ScalarProperty Name="IdDistrict" ColumnName="IdDistrict" />
+          <ScalarProperty Name="DateStaffOff" ColumnName="DateStaffOff" />
+          <ScalarProperty Name="DateAccountBlock" ColumnName="DateAccountBlock" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ImageAvata" ColumnName="ImageAvata" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="AddressSatff" ColumnName="AddressSatff" />
+          <ScalarProperty Name="PhoneStaff" ColumnName="PhoneStaff" />
+          <ScalarProperty Name="CancelHideStaff" ColumnName="CancelHideStaff" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="NormalizedUserName" ColumnName="NormalizedUserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NormalizedEmail" ColumnName="NormalizedEmail" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEnd" ColumnName="LockoutEnd" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="TokenData" ColumnName="TokenData" />
+          <ScalarProperty Name="TotalChat" ColumnName="TotalChat" />
+          <ScalarProperty Name="WasView" ColumnName="WasView" />
+          <ScalarProperty Name="NameFile" ColumnName="NameFile" />
+          <ScalarProperty Name="TypeImage" ColumnName="TypeImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewNotifications">
+      <EntityTypeMapping TypeName="ManagerMusicDatabaseModel.ViewNotification">
+        <MappingFragment StoreEntitySet="ViewNotifications">
+          <ScalarProperty Name="IdViewNotification" ColumnName="IdViewNotification" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

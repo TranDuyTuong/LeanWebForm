@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ManagerMusicDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ActiverAccounts">
+    <Key>
+      <PropertyRef Name="IdAccountActiver" />
+    </Key>
+    <Property Name="IdAccountActiver" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameAccountActiver" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AnswerComments">
+    <Key>
+      <PropertyRef Name="IdAnswer" />
+    </Key>
+    <Property Name="IdAnswer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdComment" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ContentAnswer" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AnswerGmailRequestPasswords">
+    <Key>
+      <PropertyRef Name="IdAnswerGmail" />
+    </Key>
+    <Property Name="IdAnswerGmail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRequestPassword" Type="int" Nullable="false" />
+    <Property Name="IdStaff" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" />
+    <Property Name="NameUser" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="TitleAnswer" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="ContentAnswer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateAnswer" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AnswerRequests">
+    <Key>
+      <PropertyRef Name="IdAnswer" />
+    </Key>
+    <Property Name="IdAnswer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTypeSent" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRequest" Type="int" Nullable="false" />
+    <Property Name="IdStaff" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdRead" Type="int" Nullable="false" />
+    <Property Name="TitleSent" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="ContentSent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateSent" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AppRoleClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AppUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AppUserLogins">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LoginProvider" Type="nvarchar(max)" />
+    <Property Name="ProviderKey" Type="nvarchar(max)" />
+    <Property Name="ProviderDisplayName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AppUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AppUserTokens">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LoginProvider" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Value" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="BirthdayUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TitleSent" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ContentSent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BirthdayUser" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="DateSent" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="StatusSent" Type="bit" Nullable="false" />
+    <Property Name="T_UsersIdUser" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ChatImageStaffs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameImage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TypeImage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileImage" Type="varbinary(max)" Nullable="false" />
+    <Property Name="IdChat" Type="int" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="MimeType" Type="nvarchar(max)" />
+    <Property Name="ImageBase64" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ChatStaffs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Citys">
+    <Key>
+      <PropertyRef Name="IdCity" />
+    </Key>
+    <Property Name="IdCity" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameCity" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommentMusics">
+    <Key>
+      <PropertyRef Name="IdComment" />
+    </Key>
+    <Property Name="IdComment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMusic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ContentComment" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeleteNotifications">
+    <Key>
+      <PropertyRef Name="IdDeleteNotification" />
+    </Key>
+    <Property Name="IdDeleteNotification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Districts">
+    <Key>
+      <PropertyRef Name="IdDistrict" />
+    </Key>
+    <Property Name="IdDistrict" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCity" Type="int" Nullable="false" />
+    <Property Name="NameDistrict" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DowloadMusics">
+    <Key>
+      <PropertyRef Name="IdDowload" />
+    </Key>
+    <Property Name="IdDowload" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMusic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NameUser" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FileMusics">
+    <Key>
+      <PropertyRef Name="IdFile" />
+    </Key>
+    <Property Name="IdFile" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMusic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NameFile" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="DataFile" Type="varbinary(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="MimeType" Type="nvarchar(max)" />
+    <Property Name="DataFieImage" Type="varbinary(max)" />
+    <Property Name="NameImage" Type="nvarchar(max)" />
+    <Property Name="TypeImage" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="FilePlans">
+    <Key>
+      <PropertyRef Name="IdFile" />
+    </Key>
+    <Property Name="IdFile" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPlan" Type="int" Nullable="false" />
+    <Property Name="TypeFile" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MimeType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ContentFile" Type="varbinary(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="NameFile" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Genders">
+    <Key>
+      <PropertyRef Name="IdGender" />
+    </Key>
+    <Property Name="IdGender" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameGender" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HappyBirthdayStaffs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsStatusSent" Type="int" Nullable="false" />
+    <Property Name="TitleSent" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ContentSent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistoryRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRole" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StartDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="EndDate" Type="datetime2" Precision="7" />
+    <Property Name="IdUserDecenRole" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ImageQRCores">
+    <Key>
+      <PropertyRef Name="IdQRcore" />
+    </Key>
+    <Property Name="IdQRcore" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMusic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TitleImage" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="ImageData" Type="varbinary(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeverUsers">
+    <Key>
+      <PropertyRef Name="IdLever" />
+    </Key>
+    <Property Name="IdLever" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DescriptionName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LikeMusics">
+    <Key>
+      <PropertyRef Name="IdLike" />
+    </Key>
+    <Property Name="IdLike" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMusic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LikeStatus" Type="bit" Nullable="false" />
+    <Property Name="DateLike" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Logins">
+    <Key>
+      <PropertyRef Name="IdLogin" />
+    </Key>
+    <Property Name="IdLogin" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DateLogin" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="TimeLogin" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="TimeSignout" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Marriages">
+    <Key>
+      <PropertyRef Name="IdMarriage" />
+    </Key>
+    <Property Name="IdMarriage" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameMarriage" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Musics">
+    <Key>
+      <PropertyRef Name="IdMusic" />
+    </Key>
+    <Property Name="IdMusic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NoMusic" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NameMusic" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="AuthorMusic" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="IdSeason" Type="int" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IdStatusMusic" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdStaff" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TimeCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IdSaints" Type="int" Nullable="false" />
+    <Property Name="Date" Type="int" Nullable="false" />
+    <Property Name="Month" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="TokenData" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="NotificationPlans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPlan" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StatusView" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NotificationUsers">
+    <Key>
+      <PropertyRef Name="IdNotification" />
+    </Key>
+    <Property Name="IdNotification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdViewNotification" Type="int" Nullable="false" />
+    <Property Name="IdDeleteNotification" Type="int" Nullable="false" />
+    <Property Name="TitleNotification" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="TimeCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="AuthorNotification" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlanStaffs">
+    <Key>
+      <PropertyRef Name="IdPlan" />
+    </Key>
+    <Property Name="IdPlan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamePlan" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ContentPlan" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IdUserPlan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUserRequest" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DateComplete" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IdStatusPlan" Type="int" Nullable="false" />
+    <Property Name="AcceptPlan" Type="int" Nullable="false" />
+    <Property Name="TimeComplete" Type="time" Precision="7" Nullable="false" />
+    <Property Name="TimeUp" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ratings">
+    <Key>
+      <PropertyRef Name="IdRating" />
+    </Key>
+    <Property Name="IdRating" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMusic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Rating" Type="int" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReadUsers">
+    <Key>
+      <PropertyRef Name="IdRead" />
+    </Key>
+    <Property Name="IdRead" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReadContent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReceiveRequests">
+    <Key>
+      <PropertyRef Name="IdReceiveRequest" />
+    </Key>
+    <Property Name="IdReceiveRequest" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RequestPasswords">
+    <Key>
+      <PropertyRef Name="IdRequestPassword" />
+    </Key>
+    <Property Name="IdRequestPassword" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdReceiveRequest" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" />
+    <Property Name="NameUser" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="TitleRequest" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="ContentRequest" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GmailRequest" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ImageRequest" Type="varbinary(max)" Nullable="false" />
+    <Property Name="DateRequest" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="DateHandled" Type="datetime2" Precision="7" />
+    <Property Name="DateSuccess" Type="datetime2" Precision="7" />
+    <Property Name="MineType" Type="nvarchar(max)" />
+    <Property Name="TypeImg" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="RequestUsers">
+    <Key>
+      <PropertyRef Name="IdRequest" />
+    </Key>
+    <Property Name="IdRequest" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TitleRequest" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ContentRequest" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateRequest" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="DateHandled" Type="datetime2" Precision="7" />
+    <Property Name="DateSuccess" Type="datetime2" Precision="7" />
+    <Property Name="IdReceiveRequest" Type="int" Nullable="false" />
+    <Property Name="IdTypeSent" Type="int" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="IdRole" />
+    </Key>
+    <Property Name="IdRole" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdStatusRole" Type="int" Nullable="false" />
+    <Property Name="SymbolRole" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="NormalizedName" Type="nvarchar(max)" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Saintes">
+    <Key>
+      <PropertyRef Name="IdSaints" />
+    </Key>
+    <Property Name="IdSaints" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSaints" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IdStatusSaints" Type="int" Nullable="false" />
+    <Property Name="IdStaff" Type="nvarchar(max)" />
+    <Property Name="TokenData" Type="nvarchar(max)" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Seasons">
+    <Key>
+      <PropertyRef Name="IdSeason" />
+    </Key>
+    <Property Name="IdSeason" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSeason" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IdStatusSeason" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StaffOrUsers">
+    <Key>
+      <PropertyRef Name="IdStaffOrUser" />
+    </Key>
+    <Property Name="IdStaffOrUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="symbol" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusHappyBirthDayStaffs">
+    <Key>
+      <PropertyRef Name="IsStatusSent" />
+    </Key>
+    <Property Name="IsStatusSent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusMusics">
+    <Key>
+      <PropertyRef Name="IdStatusMusic" />
+    </Key>
+    <Property Name="IdStatusMusic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameStatusMusic" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusPlans">
+    <Key>
+      <PropertyRef Name="IdStatusPlan" />
+    </Key>
+    <Property Name="IdStatusPlan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameStauts" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusRoles">
+    <Key>
+      <PropertyRef Name="IdStatusRole" />
+    </Key>
+    <Property Name="IdStatusRole" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameStatus" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusSaintes">
+    <Key>
+      <PropertyRef Name="IdIdStatusSaints" />
+    </Key>
+    <Property Name="IdIdStatusSaints" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameStatusSaints" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusSeasons">
+    <Key>
+      <PropertyRef Name="IdStatusSeason" />
+    </Key>
+    <Property Name="IdStatusSeason" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameStatus" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusStaffOffs">
+    <Key>
+      <PropertyRef Name="StatusStaffOff" />
+    </Key>
+    <Property Name="StatusStaffOff" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_UpdateMusics">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMusic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TokenData" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileNameOld" Type="nvarchar(max)" />
+    <Property Name="FileNameNew" Type="nvarchar(max)" />
+    <Property Name="NameMusicOld" Type="nvarchar(max)" />
+    <Property Name="NameMuiscNew" Type="nvarchar(max)" />
+    <Property Name="AuthorOld" Type="nvarchar(max)" />
+    <Property Name="AuthorNew" Type="nvarchar(max)" />
+    <Property Name="IdSeasonOld" Type="int" Nullable="false" />
+    <Property Name="IdSaintOld" Type="int" Nullable="false" />
+    <Property Name="IdSeasonNew" Type="int" Nullable="false" />
+    <Property Name="IdSaintNew" Type="int" Nullable="false" />
+    <Property Name="DateUpdate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypeSentUsers">
+    <Key>
+      <PropertyRef Name="IdTypeSent" />
+    </Key>
+    <Property Name="IdTypeSent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameType" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRole" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DateDecentralization" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdStaff" Type="nvarchar(max)" />
+    <Property Name="IdAccountActiver" Type="int" Nullable="false" />
+    <Property Name="IdLever" Type="int" Nullable="false" />
+    <Property Name="IdStaffOrUser" Type="int" Nullable="false" />
+    <Property Name="StatusStaffOff" Type="int" />
+    <Property Name="IdMarriage" Type="int" />
+    <Property Name="IdGender" Type="int" Nullable="false" />
+    <Property Name="IdCity" Type="int" Nullable="false" />
+    <Property Name="IdDistrict" Type="int" Nullable="false" />
+    <Property Name="DateStaffOff" Type="datetime2" Precision="7" />
+    <Property Name="DateAccountBlock" Type="datetime2" Precision="7" />
+    <Property Name="Birthday" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Date" Type="int" Nullable="false" />
+    <Property Name="Month" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="ImageAvata" Type="varbinary(max)" />
+    <Property Name="DateUpdate" Type="datetime2" Precision="7" />
+    <Property Name="AddressSatff" Type="nvarchar" MaxLength="500" />
+    <Property Name="PhoneStaff" Type="varchar" MaxLength="15" />
+    <Property Name="CancelHideStaff" Type="int" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="NormalizedUserName" Type="nvarchar(max)" />
+    <Property Name="Email" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="NormalizedEmail" Type="nvarchar(max)" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEnd" Type="datetimeoffset" Precision="7" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="TokenData" Type="nvarchar(max)" />
+    <Property Name="TotalChat" Type="int" Nullable="false" />
+    <Property Name="WasView" Type="bit" Nullable="false" />
+    <Property Name="NameFile" Type="nvarchar(max)" />
+    <Property Name="TypeImage" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ViewNotifications">
+    <Key>
+      <PropertyRef Name="IdViewNotification" />
+    </Key>
+    <Property Name="IdViewNotification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="DateCreate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AnswerComments_CommentMusics_IdComment">
+    <End Role="CommentMusics" Type="Self.CommentMusics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AnswerComments" Type="Self.AnswerComments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CommentMusics">
+        <PropertyRef Name="IdComment" />
+      </Principal>
+      <Dependent Role="AnswerComments">
+        <PropertyRef Name="IdComment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnswerComments_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="AnswerComments" Type="Self.AnswerComments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="AnswerComments">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnswerGmailRequestPasswords_RequestPasswords_IdRequestPassword">
+    <End Role="RequestPasswords" Type="Self.RequestPasswords" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AnswerGmailRequestPasswords" Type="Self.AnswerGmailRequestPasswords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RequestPasswords">
+        <PropertyRef Name="IdRequestPassword" />
+      </Principal>
+      <Dependent Role="AnswerGmailRequestPasswords">
+        <PropertyRef Name="IdRequestPassword" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnswerRequests_ReadUsers_IdRead">
+    <End Role="ReadUsers" Type="Self.ReadUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AnswerRequests" Type="Self.AnswerRequests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReadUsers">
+        <PropertyRef Name="IdRead" />
+      </Principal>
+      <Dependent Role="AnswerRequests">
+        <PropertyRef Name="IdRead" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnswerRequests_RequestUsers_IdRequest">
+    <End Role="RequestUsers" Type="Self.RequestUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AnswerRequests" Type="Self.AnswerRequests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RequestUsers">
+        <PropertyRef Name="IdRequest" />
+      </Principal>
+      <Dependent Role="AnswerRequests">
+        <PropertyRef Name="IdRequest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnswerRequests_TypeSentUsers_IdTypeSent">
+    <End Role="TypeSentUsers" Type="Self.TypeSentUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AnswerRequests" Type="Self.AnswerRequests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeSentUsers">
+        <PropertyRef Name="IdTypeSent" />
+      </Principal>
+      <Dependent Role="AnswerRequests">
+        <PropertyRef Name="IdTypeSent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnswerRequests_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="AnswerRequests" Type="Self.AnswerRequests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="AnswerRequests">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BirthdayUsers_Users_T_UsersIdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="BirthdayUsers" Type="Self.BirthdayUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="BirthdayUsers">
+        <PropertyRef Name="T_UsersIdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommentMusics_Musics_IdMusic">
+    <End Role="Musics" Type="Self.Musics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CommentMusics" Type="Self.CommentMusics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musics">
+        <PropertyRef Name="IdMusic" />
+      </Principal>
+      <Dependent Role="CommentMusics">
+        <PropertyRef Name="IdMusic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommentMusics_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="CommentMusics" Type="Self.CommentMusics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="CommentMusics">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Districts_Citys_IdCity">
+    <End Role="Citys" Type="Self.Citys" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Districts" Type="Self.Districts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Citys">
+        <PropertyRef Name="IdCity" />
+      </Principal>
+      <Dependent Role="Districts">
+        <PropertyRef Name="IdCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DowloadMusics_Musics_IdMusic">
+    <End Role="Musics" Type="Self.Musics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DowloadMusics" Type="Self.DowloadMusics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musics">
+        <PropertyRef Name="IdMusic" />
+      </Principal>
+      <Dependent Role="DowloadMusics">
+        <PropertyRef Name="IdMusic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileMusics_Musics_IdMusic">
+    <End Role="Musics" Type="Self.Musics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FileMusics" Type="Self.FileMusics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musics">
+        <PropertyRef Name="IdMusic" />
+      </Principal>
+      <Dependent Role="FileMusics">
+        <PropertyRef Name="IdMusic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HappyBirthdayStaffs_StatusHappyBirthDayStaffs_IsStatusSent">
+    <End Role="StatusHappyBirthDayStaffs" Type="Self.StatusHappyBirthDayStaffs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HappyBirthdayStaffs" Type="Self.HappyBirthdayStaffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusHappyBirthDayStaffs">
+        <PropertyRef Name="IsStatusSent" />
+      </Principal>
+      <Dependent Role="HappyBirthdayStaffs">
+        <PropertyRef Name="IsStatusSent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HappyBirthdayStaffs_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HappyBirthdayStaffs" Type="Self.HappyBirthdayStaffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="HappyBirthdayStaffs">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImageQRCores_Musics_IdMusic">
+    <End Role="Musics" Type="Self.Musics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ImageQRCores" Type="Self.ImageQRCores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musics">
+        <PropertyRef Name="IdMusic" />
+      </Principal>
+      <Dependent Role="ImageQRCores">
+        <PropertyRef Name="IdMusic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LikeMusics_Musics_IdMusic">
+    <End Role="Musics" Type="Self.Musics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LikeMusics" Type="Self.LikeMusics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musics">
+        <PropertyRef Name="IdMusic" />
+      </Principal>
+      <Dependent Role="LikeMusics">
+        <PropertyRef Name="IdMusic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LikeMusics_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="LikeMusics" Type="Self.LikeMusics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="LikeMusics">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Musics_Saintes_IdSaints">
+    <End Role="Saintes" Type="Self.Saintes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Musics" Type="Self.Musics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saintes">
+        <PropertyRef Name="IdSaints" />
+      </Principal>
+      <Dependent Role="Musics">
+        <PropertyRef Name="IdSaints" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Musics_Seasons_IdSeason">
+    <End Role="Seasons" Type="Self.Seasons" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Musics" Type="Self.Musics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seasons">
+        <PropertyRef Name="IdSeason" />
+      </Principal>
+      <Dependent Role="Musics">
+        <PropertyRef Name="IdSeason" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Musics_StatusMusics_IdStatusMusic">
+    <End Role="StatusMusics" Type="Self.StatusMusics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Musics" Type="Self.Musics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusMusics">
+        <PropertyRef Name="IdStatusMusic" />
+      </Principal>
+      <Dependent Role="Musics">
+        <PropertyRef Name="IdStatusMusic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Musics_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Musics" Type="Self.Musics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Musics">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificationUsers_DeleteNotifications_IdDeleteNotification">
+    <End Role="DeleteNotifications" Type="Self.DeleteNotifications" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NotificationUsers" Type="Self.NotificationUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeleteNotifications">
+        <PropertyRef Name="IdDeleteNotification" />
+      </Principal>
+      <Dependent Role="NotificationUsers">
+        <PropertyRef Name="IdDeleteNotification" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificationUsers_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NotificationUsers" Type="Self.NotificationUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="NotificationUsers">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificationUsers_ViewNotifications_IdViewNotification">
+    <End Role="ViewNotifications" Type="Self.ViewNotifications" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NotificationUsers" Type="Self.NotificationUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ViewNotifications">
+        <PropertyRef Name="IdViewNotification" />
+      </Principal>
+      <Dependent Role="NotificationUsers">
+        <PropertyRef Name="IdViewNotification" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ratings_Musics_IdMusic">
+    <End Role="Musics" Type="Self.Musics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ratings" Type="Self.Ratings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musics">
+        <PropertyRef Name="IdMusic" />
+      </Principal>
+      <Dependent Role="Ratings">
+        <PropertyRef Name="IdMusic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ratings_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Ratings" Type="Self.Ratings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Ratings">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestPasswords_ReceiveRequests_IdReceiveRequest">
+    <End Role="ReceiveRequests" Type="Self.ReceiveRequests" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RequestPasswords" Type="Self.RequestPasswords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReceiveRequests">
+        <PropertyRef Name="IdReceiveRequest" />
+      </Principal>
+      <Dependent Role="RequestPasswords">
+        <PropertyRef Name="IdReceiveRequest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestUsers_ReceiveRequests_IdReceiveRequest">
+    <End Role="ReceiveRequests" Type="Self.ReceiveRequests" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RequestUsers" Type="Self.RequestUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReceiveRequests">
+        <PropertyRef Name="IdReceiveRequest" />
+      </Principal>
+      <Dependent Role="RequestUsers">
+        <PropertyRef Name="IdReceiveRequest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestUsers_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RequestUsers" Type="Self.RequestUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="RequestUsers">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Roles_StatusRoles_IdStatusRole">
+    <End Role="StatusRoles" Type="Self.StatusRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Roles" Type="Self.Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusRoles">
+        <PropertyRef Name="IdStatusRole" />
+      </Principal>
+      <Dependent Role="Roles">
+        <PropertyRef Name="IdStatusRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Saintes_StatusSaintes_IdStatusSaints">
+    <End Role="StatusSaintes" Type="Self.StatusSaintes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Saintes" Type="Self.Saintes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusSaintes">
+        <PropertyRef Name="IdIdStatusSaints" />
+      </Principal>
+      <Dependent Role="Saintes">
+        <PropertyRef Name="IdStatusSaints" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Seasons_StatusSeasons_IdStatusSeason">
+    <End Role="StatusSeasons" Type="Self.StatusSeasons" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Seasons" Type="Self.Seasons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusSeasons">
+        <PropertyRef Name="IdStatusSeason" />
+      </Principal>
+      <Dependent Role="Seasons">
+        <PropertyRef Name="IdStatusSeason" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Roles_IdRole">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="IdRole" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Users_IdUser">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_ActiverAccounts_IdAccountActiver">
+    <End Role="ActiverAccounts" Type="Self.ActiverAccounts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiverAccounts">
+        <PropertyRef Name="IdAccountActiver" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdAccountActiver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Citys_IdCity">
+    <End Role="Citys" Type="Self.Citys" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Citys">
+        <PropertyRef Name="IdCity" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Districts_IdDistrict">
+    <End Role="Districts" Type="Self.Districts" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Districts">
+        <PropertyRef Name="IdDistrict" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdDistrict" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Genders_IdGender">
+    <End Role="Genders" Type="Self.Genders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="IdGender" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdGender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_LeverUsers_IdLever">
+    <End Role="LeverUsers" Type="Self.LeverUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeverUsers">
+        <PropertyRef Name="IdLever" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdLever" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Marriages_IdMarriage">
+    <End Role="Marriages" Type="Self.Marriages" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marriages">
+        <PropertyRef Name="IdMarriage" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdMarriage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_StaffOrUsers_IdStaffOrUser">
+    <End Role="StaffOrUsers" Type="Self.StaffOrUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StaffOrUsers">
+        <PropertyRef Name="IdStaffOrUser" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdStaffOrUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_StatusStaffOffs_StatusStaffOff">
+    <End Role="StatusStaffOffs" Type="Self.StatusStaffOffs" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusStaffOffs">
+        <PropertyRef Name="StatusStaffOff" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="StatusStaffOff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ManagerMusicDatabaseModelStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ActiverAccounts" EntityType="Self.ActiverAccounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AnswerComments" EntityType="Self.AnswerComments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AnswerGmailRequestPasswords" EntityType="Self.AnswerGmailRequestPasswords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AnswerRequests" EntityType="Self.AnswerRequests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppRoleClaims" EntityType="Self.AppRoleClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppUserClaims" EntityType="Self.AppUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppUserLogins" EntityType="Self.AppUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppUserRoles" EntityType="Self.AppUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppUserTokens" EntityType="Self.AppUserTokens" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BirthdayUsers" EntityType="Self.BirthdayUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChatImageStaffs" EntityType="Self.ChatImageStaffs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChatStaffs" EntityType="Self.ChatStaffs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Citys" EntityType="Self.Citys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommentMusics" EntityType="Self.CommentMusics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeleteNotifications" EntityType="Self.DeleteNotifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Districts" EntityType="Self.Districts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DowloadMusics" EntityType="Self.DowloadMusics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileMusics" EntityType="Self.FileMusics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FilePlans" EntityType="Self.FilePlans" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genders" EntityType="Self.Genders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HappyBirthdayStaffs" EntityType="Self.HappyBirthdayStaffs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoryRoles" EntityType="Self.HistoryRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImageQRCores" EntityType="Self.ImageQRCores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeverUsers" EntityType="Self.LeverUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LikeMusics" EntityType="Self.LikeMusics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logins" EntityType="Self.Logins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Marriages" EntityType="Self.Marriages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musics" EntityType="Self.Musics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotificationPlans" EntityType="Self.NotificationPlans" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotificationUsers" EntityType="Self.NotificationUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanStaffs" EntityType="Self.PlanStaffs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ratings" EntityType="Self.Ratings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReadUsers" EntityType="Self.ReadUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReceiveRequests" EntityType="Self.ReceiveRequests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequestPasswords" EntityType="Self.RequestPasswords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequestUsers" EntityType="Self.RequestUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Saintes" EntityType="Self.Saintes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Seasons" EntityType="Self.Seasons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StaffOrUsers" EntityType="Self.StaffOrUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusHappyBirthDayStaffs" EntityType="Self.StatusHappyBirthDayStaffs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusMusics" EntityType="Self.StatusMusics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusPlans" EntityType="Self.StatusPlans" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusRoles" EntityType="Self.StatusRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusSaintes" EntityType="Self.StatusSaintes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusSeasons" EntityType="Self.StatusSeasons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusStaffOffs" EntityType="Self.StatusStaffOffs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_UpdateMusics" EntityType="Self.T_UpdateMusics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeSentUsers" EntityType="Self.TypeSentUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ViewNotifications" EntityType="Self.ViewNotifications" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AnswerComments_CommentMusics_IdComment" Association="Self.FK_AnswerComments_CommentMusics_IdComment">
+      <End Role="CommentMusics" EntitySet="CommentMusics" />
+      <End Role="AnswerComments" EntitySet="AnswerComments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnswerComments_Users_IdUser" Association="Self.FK_AnswerComments_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="AnswerComments" EntitySet="AnswerComments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnswerGmailRequestPasswords_RequestPasswords_IdRequestPassword" Association="Self.FK_AnswerGmailRequestPasswords_RequestPasswords_IdRequestPassword">
+      <End Role="RequestPasswords" EntitySet="RequestPasswords" />
+      <End Role="AnswerGmailRequestPasswords" EntitySet="AnswerGmailRequestPasswords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnswerRequests_ReadUsers_IdRead" Association="Self.FK_AnswerRequests_ReadUsers_IdRead">
+      <End Role="ReadUsers" EntitySet="ReadUsers" />
+      <End Role="AnswerRequests" EntitySet="AnswerRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnswerRequests_RequestUsers_IdRequest" Association="Self.FK_AnswerRequests_RequestUsers_IdRequest">
+      <End Role="RequestUsers" EntitySet="RequestUsers" />
+      <End Role="AnswerRequests" EntitySet="AnswerRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnswerRequests_TypeSentUsers_IdTypeSent" Association="Self.FK_AnswerRequests_TypeSentUsers_IdTypeSent">
+      <End Role="TypeSentUsers" EntitySet="TypeSentUsers" />
+      <End Role="AnswerRequests" EntitySet="AnswerRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnswerRequests_Users_IdUser" Association="Self.FK_AnswerRequests_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="AnswerRequests" EntitySet="AnswerRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BirthdayUsers_Users_T_UsersIdUser" Association="Self.FK_BirthdayUsers_Users_T_UsersIdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="BirthdayUsers" EntitySet="BirthdayUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommentMusics_Musics_IdMusic" Association="Self.FK_CommentMusics_Musics_IdMusic">
+      <End Role="Musics" EntitySet="Musics" />
+      <End Role="CommentMusics" EntitySet="CommentMusics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommentMusics_Users_IdUser" Association="Self.FK_CommentMusics_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="CommentMusics" EntitySet="CommentMusics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Districts_Citys_IdCity" Association="Self.FK_Districts_Citys_IdCity">
+      <End Role="Citys" EntitySet="Citys" />
+      <End Role="Districts" EntitySet="Districts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DowloadMusics_Musics_IdMusic" Association="Self.FK_DowloadMusics_Musics_IdMusic">
+      <End Role="Musics" EntitySet="Musics" />
+      <End Role="DowloadMusics" EntitySet="DowloadMusics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileMusics_Musics_IdMusic" Association="Self.FK_FileMusics_Musics_IdMusic">
+      <End Role="Musics" EntitySet="Musics" />
+      <End Role="FileMusics" EntitySet="FileMusics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HappyBirthdayStaffs_StatusHappyBirthDayStaffs_IsStatusSent" Association="Self.FK_HappyBirthdayStaffs_StatusHappyBirthDayStaffs_IsStatusSent">
+      <End Role="StatusHappyBirthDayStaffs" EntitySet="StatusHappyBirthDayStaffs" />
+      <End Role="HappyBirthdayStaffs" EntitySet="HappyBirthdayStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HappyBirthdayStaffs_Users_IdUser" Association="Self.FK_HappyBirthdayStaffs_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="HappyBirthdayStaffs" EntitySet="HappyBirthdayStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImageQRCores_Musics_IdMusic" Association="Self.FK_ImageQRCores_Musics_IdMusic">
+      <End Role="Musics" EntitySet="Musics" />
+      <End Role="ImageQRCores" EntitySet="ImageQRCores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LikeMusics_Musics_IdMusic" Association="Self.FK_LikeMusics_Musics_IdMusic">
+      <End Role="Musics" EntitySet="Musics" />
+      <End Role="LikeMusics" EntitySet="LikeMusics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LikeMusics_Users_IdUser" Association="Self.FK_LikeMusics_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="LikeMusics" EntitySet="LikeMusics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Musics_Saintes_IdSaints" Association="Self.FK_Musics_Saintes_IdSaints">
+      <End Role="Saintes" EntitySet="Saintes" />
+      <End Role="Musics" EntitySet="Musics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Musics_Seasons_IdSeason" Association="Self.FK_Musics_Seasons_IdSeason">
+      <End Role="Seasons" EntitySet="Seasons" />
+      <End Role="Musics" EntitySet="Musics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Musics_StatusMusics_IdStatusMusic" Association="Self.FK_Musics_StatusMusics_IdStatusMusic">
+      <End Role="StatusMusics" EntitySet="StatusMusics" />
+      <End Role="Musics" EntitySet="Musics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Musics_Users_IdUser" Association="Self.FK_Musics_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Musics" EntitySet="Musics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificationUsers_DeleteNotifications_IdDeleteNotification" Association="Self.FK_NotificationUsers_DeleteNotifications_IdDeleteNotification">
+      <End Role="DeleteNotifications" EntitySet="DeleteNotifications" />
+      <End Role="NotificationUsers" EntitySet="NotificationUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificationUsers_Users_IdUser" Association="Self.FK_NotificationUsers_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="NotificationUsers" EntitySet="NotificationUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificationUsers_ViewNotifications_IdViewNotification" Association="Self.FK_NotificationUsers_ViewNotifications_IdViewNotification">
+      <End Role="ViewNotifications" EntitySet="ViewNotifications" />
+      <End Role="NotificationUsers" EntitySet="NotificationUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ratings_Musics_IdMusic" Association="Self.FK_Ratings_Musics_IdMusic">
+      <End Role="Musics" EntitySet="Musics" />
+      <End Role="Ratings" EntitySet="Ratings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ratings_Users_IdUser" Association="Self.FK_Ratings_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Ratings" EntitySet="Ratings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestPasswords_ReceiveRequests_IdReceiveRequest" Association="Self.FK_RequestPasswords_ReceiveRequests_IdReceiveRequest">
+      <End Role="ReceiveRequests" EntitySet="ReceiveRequests" />
+      <End Role="RequestPasswords" EntitySet="RequestPasswords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestUsers_ReceiveRequests_IdReceiveRequest" Association="Self.FK_RequestUsers_ReceiveRequests_IdReceiveRequest">
+      <End Role="ReceiveRequests" EntitySet="ReceiveRequests" />
+      <End Role="RequestUsers" EntitySet="RequestUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestUsers_Users_IdUser" Association="Self.FK_RequestUsers_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="RequestUsers" EntitySet="RequestUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Roles_StatusRoles_IdStatusRole" Association="Self.FK_Roles_StatusRoles_IdStatusRole">
+      <End Role="StatusRoles" EntitySet="StatusRoles" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Saintes_StatusSaintes_IdStatusSaints" Association="Self.FK_Saintes_StatusSaintes_IdStatusSaints">
+      <End Role="StatusSaintes" EntitySet="StatusSaintes" />
+      <End Role="Saintes" EntitySet="Saintes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seasons_StatusSeasons_IdStatusSeason" Association="Self.FK_Seasons_StatusSeasons_IdStatusSeason">
+      <End Role="StatusSeasons" EntitySet="StatusSeasons" />
+      <End Role="Seasons" EntitySet="Seasons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Roles_IdRole" Association="Self.FK_UserRoles_Roles_IdRole">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Users_IdUser" Association="Self.FK_UserRoles_Users_IdUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_ActiverAccounts_IdAccountActiver" Association="Self.FK_Users_ActiverAccounts_IdAccountActiver">
+      <End Role="ActiverAccounts" EntitySet="ActiverAccounts" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Citys_IdCity" Association="Self.FK_Users_Citys_IdCity">
+      <End Role="Citys" EntitySet="Citys" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Districts_IdDistrict" Association="Self.FK_Users_Districts_IdDistrict">
+      <End Role="Districts" EntitySet="Districts" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Genders_IdGender" Association="Self.FK_Users_Genders_IdGender">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_LeverUsers_IdLever" Association="Self.FK_Users_LeverUsers_IdLever">
+      <End Role="LeverUsers" EntitySet="LeverUsers" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Marriages_IdMarriage" Association="Self.FK_Users_Marriages_IdMarriage">
+      <End Role="Marriages" EntitySet="Marriages" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_StaffOrUsers_IdStaffOrUser" Association="Self.FK_Users_StaffOrUsers_IdStaffOrUser">
+      <End Role="StaffOrUsers" EntitySet="StaffOrUsers" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_StatusStaffOffs_StatusStaffOff" Association="Self.FK_Users_StatusStaffOffs_StatusStaffOff">
+      <End Role="StatusStaffOffs" EntitySet="StatusStaffOffs" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
