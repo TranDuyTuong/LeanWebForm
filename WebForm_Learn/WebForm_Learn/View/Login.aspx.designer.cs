@@ -7,39 +7,39 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebForm_Learn
+namespace WebForm_Learn.View
 {
 
 
-    public partial class _Default
+    public partial class Login
     {
 
         /// <summary>
-        /// Btn_LoginAjax control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_LoginAjax;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// TxtEmail_1 control.
+        /// TxtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtEmail_1;
+        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
-        /// TxtPassword_1 control.
+        /// TxtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPassword_1;
+        protected global::System.Web.UI.WebControls.TextBox TxtPassword;
 
         /// <summary>
         /// Btn_Login control.
@@ -51,12 +51,12 @@ namespace WebForm_Learn
         protected global::System.Web.UI.WebControls.Button Btn_Login;
 
         /// <summary>
-        /// LblNotifi control.
+        /// ErrorNotifi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblNotifi;
+        protected global::System.Web.UI.WebControls.Label ErrorNotifi;
     }
 }

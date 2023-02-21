@@ -144,8 +144,11 @@
     <Content Include="ConnectionDatabase\MyDatabase.edmx.diagram">
       <DependentUpon>MyDatabase.edmx</DependentUpon>
     </Content>
+    <Content Include="Home.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="MyJavascript\DefaultJS.js" />
+    <Content Include="MyJavascript\IndexJS.js" />
+    <Content Include="MyJavascript\LoginJS.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -179,6 +182,8 @@
     <Content Include="View\About.aspx" />
     <Content Include="View\Contact.aspx" />
     <Content Include="View\Default.aspx" />
+    <Content Include="View\Index.aspx" />
+    <Content Include="View\Login.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -363,6 +368,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Model\InfoLogin_M.cs" />
+    <Compile Include="Model\ListCity_M.cs" />
+    <Compile Include="Model\Login_M.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -405,6 +420,20 @@
     </Compile>
     <Compile Include="View\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

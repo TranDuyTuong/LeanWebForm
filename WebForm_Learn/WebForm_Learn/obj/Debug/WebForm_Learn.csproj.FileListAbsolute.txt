@@ -53,6 +53,7 @@ D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Lea
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\Antlr3.Runtime.dll
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\AspNet.ScriptManager.bootstrap.dll
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\AspNet.ScriptManager.jQuery.dll
+D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\EntityFramework.dll
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\Microsoft.AspNet.FriendlyUrls.dll
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
@@ -62,6 +63,7 @@ D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Lea
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\Newtonsoft.Json.dll
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\System.Web.Optimization.dll
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\WebGrease.dll
+D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\EntityFramework.xml
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\System.Web.Optimization.xml
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\Newtonsoft.Json.xml
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\Antlr3.Runtime.pdb
@@ -71,6 +73,3 @@ D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Lea
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\obj\Debug\WebForm_Learn.csproj.CopyComplete
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\obj\Debug\WebForm_Learn.dll
 D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\obj\Debug\WebForm_Learn.pdb
-D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\obj\Debug\WebForm_Learn.csproj.AssemblyReference.cache
-D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\EntityFramework.dll
-D:\Development_Project\Dev_WebForm\WebForm\LeanWebForm\WebForm_Learn\WebForm_Learn\bin\EntityFramework.xml
